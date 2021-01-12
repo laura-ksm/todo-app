@@ -1,6 +1,5 @@
 const btn = document.getElementById('button-add');
-
-function addItem() {
+btn.addEventListener('click', () => {
     let task = document.getElementById('task').value;
     let node = document.createTextNode(task);
 
@@ -9,8 +8,9 @@ function addItem() {
 
     let element = document.getElementById('collection-list');
     element.appendChild(itemNew);
+});
 
-    task.value = '';
-}
-
-btn.addEventListener('click', addItem);
+let btnClear = document.getElementById('button-add');
+btnClear.addEventListener('click', () => {
+    let inputTask = document.getElementById('task').value = '';
+});
