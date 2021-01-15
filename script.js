@@ -27,6 +27,13 @@ btnClear.addEventListener('click', () => {
     let inputTask = document.getElementById('task').value = '';
 });
 
+parent = document.getElementById('collection-list');
+parent.addEventListener('click', function(e){
+    if(e.target.matches('.collection-item')){
+        parent.removeChild(e.target.parentNode);
+    }
+});
+
 let btnDelete = document.getElementById('button-delete');
 btn.addEventListener('click', () => {
     aux = document.getElementById('button-delete');
