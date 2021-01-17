@@ -7,6 +7,7 @@ btn.addEventListener('click', () => {
 
     let btnRemove = document.createElement('a');
     btnRemove.className = 'secondary-content';
+    btnRemove.id = 'delete-item';
     btnRemove.setAttribute('href','#!');
     btnRemove.appendChild(iconDelete);
 
@@ -24,20 +25,10 @@ btn.addEventListener('click', () => {
 
 let btnClear = document.getElementById('button-add');
 btnClear.addEventListener('click', () => {
-    let inputTask = document.getElementById('task').value = '';
+    document.getElementById('task').value = '';
 });
 
-parent = document.getElementById('collection-list');
-parent.addEventListener('click', function(e){
-    if(e.target.matches('.collection-item')){
-        parent.removeChild(e.target.parentNode);
-    }
-});
-
-let btnDelete = document.getElementById('button-delete');
-btn.addEventListener('click', () => {
-    aux = document.getElementById('button-delete');
-    child = aux.parentNode;
-    parent = document.getElementById('collection-list');
-    parent.removeChild(child);
+let parent = document.getElementById('collection-list');
+parent.addEventListener('click', e => {
+    parent.removeChild(e.target.parentNode.parentNode);
 });
