@@ -36,15 +36,13 @@ parent.addEventListener('click', e => {
     parent.removeChild(e.target.parentNode.parentNode);
 });
 
-// Handle disabled of the delete all button
-/*let btnAll = document.getElementById('delete-all');
-btnAll.addEventListener('click', () => {
-    if(document.body.contains(document.getElementById('list-item'))){
-        btnAll.classList.remove('disabled');
-    }else{
-        btnAll.classList.add('disabled');
-    }
-});*/
+// Handle disabled delete all button
+let bAll = document.getElementById('delete-all');
+if(document.body.contains(document.getElementById('list-item'))){
+    bAll.classList.remove('disabled');
+}else{
+    bAll.classList.add('disabled');
+}
 
 // Delete all items
 let btnAll = document.getElementById('delete-all');
