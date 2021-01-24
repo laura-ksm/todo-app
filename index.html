@@ -10,25 +10,27 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>ToDo app</title>
+    <title>ToDo List</title>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <h2 class="center-align cyan darken-1">To-Do List</h2>
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <h2 class="center-align cyan darken-1">To-Do List</h2>
+                    </div>
+                    <div class="input-field col s8">
+                        <input placeholder="" id="task" type="text">
+                        <label for="task">Add a task</label>
+                    </div>
+                    <a id="button-add" class="btn-floating btn-large waves-effect waves-light right-align cyan darken-1"><i class="material-icons">add</i></a>            
+                </div>
+                <h5>Items</h5>
+                <ul id="collection-list" class="collection"></ul>
+                <a id="delete-all" class="waves-effect waves-light btn cyan darken-1">Delete all</a>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s8">
-                <input placeholder="" id="task" type="text">
-                <label for="task">Add a task</label>
-            </div>
-            <a id="button-add" class="btn-floating btn-large waves-effect waves-light right-align cyan darken-1"><i class="material-icons">add</i></a>            
-        </div>
-        <h5>Items</h5>
-        <ul id="collection-list" class="collection with-header"></ul>
-        <a id="delete-all" class="waves-effect waves-light btn cyan darken-1">Delete all</a>
     </div>
 
     <!-- Jquery CDN -->
